@@ -1,0 +1,35 @@
+.DS_Store
+*.pyc
+*.egg-info
+*.swp
+tags
+node_modules
+__pycache__
+
+# Python/IDE/temp
+*.pyc
+__pycache__/
+*.log
+*.DS_Store
+*.swp
+*.swo
+
+# Node / build
+node_modules/
+dist/
+
+# Frappe/bench sites — DO NOT PUSH full site data
+sites/
+sites/*/private/files/
+sites/*/public/files/
+sites/*/site_config.json
+sites/*/common_site_config.json
+
+# Packaging/build outputs
+*.egg-info/
+build/
+*.tar.gz
+
+# Git LFS placeholder for large binary files if needed
+# *.png
+# *.jpg

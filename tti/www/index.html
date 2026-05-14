@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TTI Online Application & Enrollment</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            color: #333;
+        }
+        header {
+            background-color: #003366;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .hero {
+	    background-image: url('images/home.png')
+
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+        .hero h2 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+        .hero a {
+            background-color: DodgerBlue;
+            color: #003366;
+            padding: 15px 30px;
+            border-radius: 5px;
+            font-size: 18px;
+            text-decoration: none;
+            margin: 5px;
+            display: inline-block;
+        }
+    .hero a:hover {
+            background-color: #e6b800;
+        }
+        .section {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+        .section h3 {
+            color: #003366;
+            font-size: 28px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .card {
+            background-color: white;
+            flex: 1 1 250px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .card h4 {
+            color: #003366;
+            margin-bottom: 10px;
+        }
+        .card p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+         footer {
+            background-color: #003366;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+         /* Remove the outside borders */
+        table {
+            border-style: hidden;
+            text-align: center;
+            margin: 20px auto;
+        }
+ /* Mobile adjustments */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.3rem;
+      }
+      nav a {
+        font-size: 0.95rem;
+      }
+      .card {
+        padding: 16px;
+      }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+        <img src="images/tti.png" alt="TTI Logo" width="150" height="100"></a><br> 
+        </div>
+        <nav>
+            <a href="#programs">Programs</a>
+            <a href="#admissions">Admissions</a>
+            <a href="#contact">Contact</a>
+            <a href="/login">Login</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+         <h2>Welcome to Tupou Tertiary Institute</h2>
+        <p>Your future starts here. Apply and enroll online easily!</p>
+        <a href="/login?redirect-to=/tti-application-form/new">Apply Now</a>
+        <a href="/login?redirect-to=/enrollment/new">Enroll Now</a>
+    </section>
+    <section class="section" id="programs">
+        <h3>Our Programs</h3>
+        <div class="cards">
+            <div class="card">
+                <h4>Certificate Programs</h4>
+                <p>Short-term programs designed to give you the essential skills for your career.</p>
+            </div>
+            <div class="card">
+                <h4>Diploma Programs</h4>
+                <p>Comprehensive courses to provide practical knowledge and professional development.</p>
+            </div>
+            <div class="card">
+                <h4>Bachelor Programs</h4>
+                <p>Advanced academic programs to prepare students for professional or graduate careers.</p>
+            </div>
+        </div>
+    </section>
+    <section class="section" id="admissions">
+        <h3>Admission Requirements</h3>
+        <p style="text-align:center;">Applicants must provide all required documents and meet program-spec>
+    </section>
+    <section class="section" id="contact">
+        <h3>Contact Us</h3>
+        <p style="text-align:center;">Email: <a href="mailto:info@tti.to">office@tti.to</a> | Phone: +676->
+        <p style="text-align:center;">Address: Tupou Tertiary Institute, Tonga</p>
+    </section>
+<!-- Footer -->
+    <footer>
+                <table>
+                  <tr class="text-x1 font-bold mb-2">
+                    <th> TTI Portal </th>
+                    <th> Quick Links </th>
+                    <th> Contact Admissions </th>
+                  </tr>
+                  <tr>
+                    <td> Tupou Tertiary Institute <br> Salote Road, Nuku'alofa <br> Kingdom of Tonga </td>
+                    <td> <a href="https://tti.to/"> Main TTI Website </a> <br>
+                         <a href="#courses"> Our Courses </a> <br>
+                         <a href="/login"> Student Login </a> </td>
+                    <td> Email: office@tti.to <br>
+                         Phone: +676 28889/28890 </td>
+                  </tr>
+                </table>
+                <br><br>
+            <div class="text-center text-gray-500 border-t border-gray-700 mt-8 pt-6">
+                &copy; 2025 Tupou Tertiary Institute. All Rights Reserved.
+            </div>
+    </footer>
+
+    <script>
+        // Simple script for mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
