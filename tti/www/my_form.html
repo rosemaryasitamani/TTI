@@ -1,0 +1,42 @@
+<div class="container my-5">
+  <h2>Submit Information</h2>
+  <form id="custom-form" class="form-group">
+    <div class="mb-3">
+      <label class="form-label">Full Name</label>
+      <input type="text" id="full_name" class="form-control" required>
+    </div>
+    
+    <div class="mb-3">
+      <label class="form-label">Email</label>
+      <input type="email" id="email" class="form-control" required>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Message</label>
+      <textarea id="message" class="form-control" rows="4" required></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+
+<script>
+document.getElementById('custom-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  frappe.call({
+    method: 'tti.api.submit_form',
+    args: {
+      full_name: document.getElementById('full_name').value,
+      email: document.getElementById('email').value,
+      message: document.getElementById('message').value
+    },
+    callback: function(response) {
+      if (response.message && response.message.status === 'success') {
+        frappe.msgprint(response.message.message);
+        document.getElementById('custom-form').reset();
+      }
+    }
+  });
+});
+</script>

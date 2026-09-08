@@ -33,15 +33,28 @@
             text-decoration: underline;
         }
         .hero {
-	    background-image: url('images/home.png')
+	 background-image:
+           url('images/home.png');
 
-            color: white;
-            text-align: center;
-            padding: 100px 20px;
+           background-size: cover;
+           background-position: center;
+           background-repeat: no-repeat;
+
+           color: white;
+           text-align: center;
+           padding: 120px 20px;
+           min-height: 420px;
+
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+           align-items: center;
+
         }
         .hero h2 {
             font-size: 48px;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
+	    text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
         }
         .hero p {
             font-size: 20px;
@@ -127,7 +140,7 @@
             <a href="#programs">Programs</a>
             <a href="#admissions">Admissions</a>
             <a href="#contact">Contact</a>
-            <a href="/login">Login</a>
+            <a href="/login?redirect-to=/desk"> Login </a>
         </nav>
     </header>
 
@@ -156,11 +169,11 @@
     </section>
     <section class="section" id="admissions">
         <h3>Admission Requirements</h3>
-        <p style="text-align:center;">Applicants must provide all required documents and meet program-spec>
+        <p style="text-align:center;">Applicants must provide all required documents and meet program-specific admission requirements. </p>
     </section>
     <section class="section" id="contact">
         <h3>Contact Us</h3>
-        <p style="text-align:center;">Email: <a href="mailto:info@tti.to">office@tti.to</a> | Phone: +676->
+        <p style="text-align:center;">Email: <a href="mailto:info@tti.to">office@tti.to</a> | Phone: +676-28889/28890 </p>
         <p style="text-align:center;">Address: Tupou Tertiary Institute, Tonga</p>
     </section>
 <!-- Footer -->

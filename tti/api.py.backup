@@ -210,33 +210,3 @@ def get_program_courses(program, academic_term=None):
     if not program:
         return []
     return _get_program_courses(program, academic_term)
-
-
-
-# Import Frappe's core library to handle database operations and API methods
-
-# @frappe.whitelist exposes this function so JavaScript/web browsers can call it
-# allow_guest=True lets public users submit the form without logging in first
-@frappe.whitelist(allow_guest=True)
-def submit_form(full_name, email, message):
-    
-    # Create a new document in memory for the 'Lead' DocType
-    # (maps the values received from JavaScript to database fields)
-    doc = frappe.get_doc({
-        "doctype": "Lead",
-        "lead_name": full_name,
-        "email_id": email,
-        "notes": message
-    })
-    
-    # Insert the new record into the database (bypassing permission restrictions for guests)
-    doc.insert(ignore_permissions=True)
-    
-    # Save/commit changes permanently to the MariaDB database
-    frappe.db.commit()
-
-    # Send a dictionary response back to the JavaScript callback
-    return {
-        "status": "success",
-        "message": "Form submitted successfully!"
-    }
